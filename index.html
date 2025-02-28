@@ -443,6 +443,12 @@
             margin: 28px 0;
         }
         
+        .supporting-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
+        }
+        
         .data-card {
             background-color: white;
             border-radius: var(--radius);
@@ -590,6 +596,11 @@
                 grid-template-columns: 1fr;
             }
             
+            .supporting-metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
             .tab-buttons {
                 flex-direction: column;
             }
@@ -614,6 +625,62 @@
             
             .export-btn {
                 right: 80px;
+            }
+            
+            .data-card {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            
+            .data-card ul {
+                padding-left: 16px;
+            }
+            
+            .data-card li {
+                font-size: 0.95rem;
+                line-height: 1.4;
+                margin-bottom: 8px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .dashboard-section {
+                padding: 20px;
+                margin-bottom: 24px;
+            }
+            
+            .chart-container {
+                height: 350px;
+                padding: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .data-card h4 {
+                font-size: 1rem;
+            }
+            
+            .data-card li {
+                font-size: 0.9rem;
+            }
+            
+            .dashboard-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .metric-value {
+                font-size: 1.6rem;
+            }
+            
+            .chart-container {
+                height: 300px;
+                padding: 12px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
             }
         }
         
@@ -717,7 +784,7 @@
         
         <div class="dashboard-section">
             <h2><i class="fas fa-chart-area"></i> Supporting Metrics</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px;">
+            <div class="supporting-metrics-grid">
                 <div>
                     <h3><i class="fas fa-plane"></i> Flight Searches</h3>
                     <div class="chart-container">
@@ -863,12 +930,13 @@
                             </ul>
                         </div>
                         <div class="data-card">
-                            <h4><i class="fas fa-exclamation-triangle"></i> Barriers to Visit</h4>
+                            <h4><i class="fas fa-exclamation-triangle"></i> Top Barriers to Visit</h4>
                             <ul>
-                                <li><strong>Primary Barrier</strong>: Perceived cost (42% of non-visitors)</li>
-                                <li><strong>Secondary Barrier</strong>: Distance/flight time (28%)</li>
-                                <li><strong>Cultural Barrier</strong>: Uncertainty about local customs (19%)</li>
-                                <li><strong>Competitive Gap</strong>: Perceived lack of unique experiences vs. competitors</li>
+                                <li><strong>Preference for Other Destinations</strong>: 45% would rather visit other places</li>
+                                <li><strong>Restrictive Laws and Customs</strong>: 44% concerned about cultural restrictions</li>
+                                <li><strong>Perception of Unfriendliness</strong>: 27% heard people are not friendly/helpful</li>
+                                <li><strong>Lack of Knowledge</strong>: 24% do not know enough about the destination</li>
+                                <li><strong>Perceived Inauthenticity</strong>: 21% feel it's too fake/not authentic enough</li>
                             </ul>
                         </div>
                     </div>
@@ -891,4 +959,4 @@
         </div>
     </footer>
     
-    <script src="index.js"></script>
+    <script src="uk_dashboard.js"></script>
