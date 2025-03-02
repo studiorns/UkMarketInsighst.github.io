@@ -568,31 +568,6 @@
             box-shadow: 0 6px 16px rgba(26, 115, 232, 0.5);
         }
         
-        .export-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 100px;
-            background-color: var(--card-bg);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 22px;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            z-index: 1000;
-        }
-        
-        .export-btn:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
         
         @media (max-width: 768px) {
             .metrics-grid, .data-grid {
@@ -615,19 +590,12 @@
                 border-radius: 0;
             }
             
-            .print-btn, .export-btn {
+            .print-btn {
                 bottom: 20px;
                 width: 50px;
                 height: 50px;
                 font-size: 20px;
-            }
-            
-            .print-btn {
                 right: 20px;
-            }
-            
-            .export-btn {
-                right: 80px;
             }
             
             .data-card {
@@ -697,7 +665,7 @@
                 break-inside: avoid;
             }
             
-            .print-btn, .export-btn {
+            .print-btn {
                 display: none;
             }
             
@@ -722,23 +690,23 @@
     
     <div class="container">
         <div class="dashboard-section">
-            <h2><i class="fas fa-chart-line"></i> Brand Health Metrics (Q4 2024)</h2>
+            <h2><i class="fas fa-chart-line"></i> Brand Health Metrics (Q4 2024 vs Q4 2023)</h2>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-name"><i class="fas fa-eye"></i> Awareness</div>
-                    <div class="metric-value">92.70% <span class="change positive"><i class="fas fa-arrow-up"></i> +0.46pp</span></div>
+                    <div class="metric-value">92.70% <span class="change positive"><i class="fas fa-arrow-up"></i> +0.46pp vs Q4'23</span></div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-name"><i class="fas fa-search"></i> Consideration</div>
-                    <div class="metric-value">33.09% <span class="change negative"><i class="fas fa-arrow-down"></i> -0.27pp</span></div>
+                    <div class="metric-value">33.09% <span class="change negative"><i class="fas fa-arrow-down"></i> -0.27pp vs Q4'23</span></div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-name"><i class="fas fa-bullseye"></i> Intent</div>
-                    <div class="metric-value">22.10% <span class="change positive"><i class="fas fa-arrow-up"></i> +1.27pp</span></div>
+                    <div class="metric-value">22.10% <span class="change positive"><i class="fas fa-arrow-up"></i> +1.27pp vs Q4'23</span></div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-name"><i class="fas fa-calculator"></i> Intent/Consideration Ratio</div>
-                    <div class="metric-value">0.67 <span class="change positive"><i class="fas fa-arrow-up"></i> +0.04</span></div>
+                    <div class="metric-value">0.67 <span class="change positive"><i class="fas fa-arrow-up"></i> +0.04 vs Q4'23</span></div>
                 </div>
             </div>
         </div>
@@ -761,6 +729,28 @@
                 <div class="metric-card">
                     <div class="metric-name"><i class="fas fa-calendar-check"></i> Peak Months (Hotel Guests)</div>
                     <div class="metric-value">Dec & Oct</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2><i class="fas fa-chart-pie"></i> Key Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-name"><i class="fas fa-search"></i> Travel Queries (2024)</div>
+                    <div class="metric-value">97.56 <span class="change positive"><i class="fas fa-arrow-up"></i> +13.8% YoY</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name"><i class="fas fa-ad"></i> Media Impressions (2025 Plan)</div>
+                    <div class="metric-value">972.9M <span class="change positive"><i class="fas fa-arrow-up"></i> +31.4% YoY</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name"><i class="fas fa-plane"></i> Flight Searches (2024)</div>
+                    <div class="metric-value">202.1K <span class="change positive"><i class="fas fa-arrow-up"></i> +84.3% YoY</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name"><i class="fas fa-hotel"></i> Hotel Guests (2024)</div>
+                    <div class="metric-value">219.1K <span class="change positive"><i class="fas fa-arrow-up"></i> +45.6% YoY</span></div>
                 </div>
             </div>
         </div>
@@ -933,13 +923,13 @@
                             </ul>
                         </div>
                         <div class="data-card">
-                            <h4><i class="fas fa-exclamation-triangle"></i> Top Barriers to Visit</h4>
+                            <h4><i class="fas fa-exclamation-triangle"></i> Top Barriers to Visit (Q4 2024 vs Q1 2021)</h4>
                             <ul>
-                                <li><strong>Preference for Other Destinations</strong>: 45% would rather visit other places</li>
-                                <li><strong>Restrictive Laws and Customs</strong>: 44% concerned about cultural restrictions</li>
-                                <li><strong>Perception of Unfriendliness</strong>: 27% heard people are not friendly/helpful</li>
-                                <li><strong>Lack of Knowledge</strong>: 24% do not know enough about the destination</li>
-                                <li><strong>Perceived Inauthenticity</strong>: 21% feel it's too fake/not authentic enough</li>
+                                <li><strong>Preference for Other Destinations</strong>: 45% (-1pp) would rather visit other places</li>
+                                <li><strong>Restrictive Laws and Customs</strong>: 44% (+3pp) concerned about cultural restrictions</li>
+                                <li><strong>Perception of Unfriendliness</strong>: 27% (+19pp) heard people are not friendly/helpful</li>
+                                <li><strong>Lack of Knowledge</strong>: 24% (+11pp) do not know enough about the destination</li>
+                                <li><strong>Perceived Inauthenticity</strong>: 21% (-5pp) feel it's too fake/not authentic enough</li>
                             </ul>
                         </div>
                     </div>
@@ -954,12 +944,11 @@
     </div>
     
     <button class="print-btn" title="Print Dashboard"><i class="fas fa-print"></i></button>
-    <button class="export-btn" title="Export Data"><i class="fas fa-file-export"></i></button>
     
-    <footer style="background-color: var(--gray-100); padding: 20px 0; text-align: center; margin-top: 40px; border-top: 1px solid var(--gray-300);">
-        <div class="container">
-            <p style="margin: 0; color: var(--gray-700); font-size: 0.9rem;">Copyright © 2025 Renos Founotulakis - Research & Insight Unit Head</p>
-        </div>
-    </footer>
+<footer style="background-color: var(--gray-100); padding: 20px 0; text-align: center; margin-top: 40px; border-top: 1px solid var(--gray-300);">
+    <div class="container">
+        <p style="margin: 0; color: var(--gray-700); font-size: 0.9rem;">© 2025 Research & Insights Unit | Strategic Marketing & Communications | Department of Culture and Tourism – Abu Dhabi</p>
+    </div>
+</footer>
     
     <script src="uk_dashboard.js"></script>
